@@ -35,7 +35,7 @@ public class Post {
     private int authorID;
     private List<Long> tagIDs;
     @OneToMany(targetEntity = Attachment.class,cascade = CascadeType.ALL)
-    @JoinColumn(name ="cp_fk",referencedColumnName = "id")
+    @JoinColumn(name ="attachment_id",referencedColumnName = "id")
     private List<Attachment> attachments;
     public void setId(Long id) {
         this.id = id;
